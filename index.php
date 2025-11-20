@@ -1,3 +1,4 @@
 <?php 
-include "navbar"
-include "header"
+include "navbar";
+include "header";
+?>
