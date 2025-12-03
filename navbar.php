@@ -1,17 +1,18 @@
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="container-fluid">
-        <a class="navbar-brand" href="index.php">Chatons</a>
+        <a class="navbar-brand" href="connexion.php">Compte</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
                 <?php
-                $DossierAAnalyser = "Photos";
+                $DossierAAnalyser = "Formation";
                 $fichiers = scandir($DossierAAnalyser);
                 foreach ($fichiers as $fichier) {
                     if ($fichier != "." && $fichier != "..") {
-                        echo '<li class="nav-item"><a class="nav-link" href="dossier.php?d='.$fichier.'">'.$fichier.'</a></li>';
+                        $nom_sans_ext = pathinfo($fichier, PATHINFO_FILENAME);
+                        echo '<li class="nav-item"><a class="nav-link" href="media/FOND D4ECRAN.jpg?d='.$nom_sans_ext.'">'.$nom_sans_ext.'</a></li>';
                     }
                 }
                 ?>
