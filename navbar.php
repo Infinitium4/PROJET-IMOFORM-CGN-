@@ -24,7 +24,7 @@
             </ul>
 
             <!-- SE CONNECTER A DROITE SUR GRAND ÉCRAN -->
-            <a class="navbar-brand ms-lg-auto d-none d-lg-block" href="connexion.php">Se Connecter</a>
+            <a class="navbar-brand ms-lg-auto d-none d-lg-block btn btn-primary" href="connexion.php">Se Connecter</a>
         </div>
     </div>
 </nav>
