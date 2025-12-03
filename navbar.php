@@ -7,7 +7,7 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
                 <?php
-                $DossierAAnalyser = "Formation";
+                $DossierAAnalyser = "formation";
                 $fichiers = scandir($DossierAAnalyser);
                 foreach ($fichiers as $fichier) {
                     if ($fichier != "." && $fichier != "..") {

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="266cbcf7-6d9c-4f72-af6f-9ecc9a857f5a" name="localhost" url="http://localhost/PROJET-IMOFORM-CGN-">
+        <fileTransfer accessType="LOCAL" port="0" />
+      </webServer>
+    </option>
+  </component>
+</project>
