@@ -2,7 +2,9 @@
 include "header.php";
 include "navbar.php";
 ?>
-<h1>call_user_func_arraydefaafav</h1>
+<div class="Accueuil">
+    <h1>Accueil</h1>
+</div>
 <?php
 include "footer.php";
 ?>
