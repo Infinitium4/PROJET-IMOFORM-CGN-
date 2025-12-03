@@ -12,26 +12,21 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav me-auto">
                 <?php
-                $DossierAAnalyser = "Formation";
-                $fichiers = scandir($DossierAAnalyser);
+                $fichiers = scandir(__DIR__);
                 foreach ($fichiers as $fichier) {
                     if ($fichier != "." && $fichier != "..") {
-                        $nom_sans_ext = pathinfo($fichier, PATHINFO_FILENAME);
-                        echo '<li class="nav-item"><a class="nav-link" href="Formation/'.$nom_sans_ext.'.php">'.$nom_sans_ext.'</a></li>';
+                        // Vérifie que le fichier commence par "formation_"
+                        if (strpos($fichier, "formation_") === 0) {
+                            $nom_sans_ext = pathinfo($fichier, PATHINFO_FILENAME);
+                            $nom_final = substr($nom_sans_ext, strlen("formation_"));
+                            echo '<li class="nav-item"><a class="nav-link" href="'.$fichier.'">'.$nom_final.'</a></li>';
+                        }
                     }
                 }
                 ?>
             </ul>
-
             <!-- SE CONNECTER A DROITE SUR GRAND ÉCRAN -->
-            <a class="navbar-brand ms-lg-auto d-none d-lg-block btn btn-primary" href="connexion.php">Se Connecter</a>
+            <a class="navbar-brand ms-lg-auto d-none d-lg-block btn btn-primary" href="page_connexion.php">Se Connecter</a>
         </div>
     </div>
 </nav>
-#SeConnecter{
-    margin-left: auto;
-}
-
-.center{
-    text-align: center;
-}
