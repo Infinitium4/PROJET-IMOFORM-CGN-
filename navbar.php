@@ -19,7 +19,7 @@
                         if (strpos($fichier, "formation_") === 0) {
                             $nom_sans_ext = pathinfo($fichier, PATHINFO_FILENAME);
                             $nom_final = substr($nom_sans_ext, strlen("formation_"));
-                            echo '<li class="nav-item"><a class="nav-link" href="'.$nom_final.'.php">'.$nom_final.'</a></li>';
+                            echo '<li class="nav-item"><a class="nav-link" href="'.$fichier.'">'.$nom_final.'</a></li>';
                         }
                     }
                 }
