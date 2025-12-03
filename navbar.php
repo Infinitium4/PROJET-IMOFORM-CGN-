@@ -17,7 +17,7 @@
                 foreach ($fichiers as $fichier) {
                     if ($fichier != "." && $fichier != "..") {
                         $nom_sans_ext = pathinfo($fichier, PATHINFO_FILENAME);
-                        echo '<li class="nav-item"><a class="nav-link" href="connexion.php?d='.$nom_sans_ext.'">'.$nom_sans_ext.'</a></li>';
+                        echo '<li class="nav-item"><a class="nav-link" href="'.$nom_sans_ext.'.php">'.$nom_sans_ext.'</a></li>';
                     }
                 }
                 ?>
