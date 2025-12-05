@@ -2,9 +2,6 @@
 include "header.php";
 include "navbar.php";
 ?>
-
-
-
 <div class="form-box">
     <h3>Formation</h3>
     <form action="actions/" method="post" class="mt-3">
