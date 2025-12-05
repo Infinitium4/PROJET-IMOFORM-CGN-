@@ -1,6 +1,11 @@
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="container-fluid">
-        <a class="navbar-brand" href="index.php">Accueil</a>
+
+    <a class="navbar-brand d-flex align-items-center" href="index.php">
+        <img src="media/logo01.png" id="logo-small" style="margin-right: 8px;">
+        Accueil
+    </a>
+
 
         <!-- Bouton mobile -->
         <a class="navbar-brand d-lg-none" href="connexion.php" id="SeConnecter">Se Connecter</a>
