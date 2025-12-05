@@ -9,32 +9,37 @@ include "header.php";
         <form action="actions/" method="post" class="mt-3">
             <div class="mb-3">
                 <label class="form-label" for="titre">Titre</label>
-                <input id="titre" type="text" maxlength="65" name="titre" class="form-control">
+                <input id="titre" type="text" maxlength="65" class="form-control">
             </div>
 
             <div class="mb-3">
                 <label class="form-label" for="titre">Description</label>
-                <input id="Description" type="text" name="titre" class="form-control">
+                <input id="Description" type="text" class="form-control">
             </div>
 
             <div class="mb-3">
                 <label class="form-label" for="titre">Durée</label>
-                <input id="Duree" type="text" name="titre" class="form-control">
+                <input id="Duree" type="text" class="form-control">
             </div>
 
             <div class="mb-3">
                 <label class="form-label" for="titre">Niveau</label>
-                <input id="Niveau" type="text" name="titre" class="form-control">
+                <input id="Niveau" type="text" class="form-control">
             </div>
 
             <div class="mb-3">
-                <label class="form-label" for="titre">Description</label>
-                <input id="Description" type="text" name="titre" class="form-control">
+                <label class="form-label" for="titre">Secteur Concerné</label>
+                <input id="secteur_concernee" type="text" class="form-control">
             </div>
 
             <div class="mb-3">
-                <label class="form-label" for="titre">Description</label>
-                <input id="Description" type="text" name="titre" class="form-control">
+                <label class="form-label" for="titre">Date et Heure</label>
+                <input id="date_heure" type="datetime-local" name="titre" class="form-control">
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label" for="titre">Url Accès</label>
+                <input id="url_access" type="text" maxlength="65" class="form-control">
             </div>
 
             <button type="submit" class="btn btn-success w-100">OK</button>
