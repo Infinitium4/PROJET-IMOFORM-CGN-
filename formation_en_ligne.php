@@ -11,6 +11,7 @@ $type_profil = $req->fetchAll();
 
 $req = $pdo->prepare("select id_agence from travail where id_utilisateur = id_contact");
 $req->execute();
+
 $agences = $req->fetchAll();
 
 $adherants = false;
