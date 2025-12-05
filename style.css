@@ -4,7 +4,23 @@
 .Accueuil{
     text-align: center;
 }
+
 #boutongoat{
+    position: fixed;
+    bottom: 20px;     /* distance par rapport au bas */
+    right: 20px;      /* distance par rapport à la droite */
+    display: inline-block;
+    padding: 12px 20px;
+    background: #535557;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.25);
+    transition: transform .1s ease;
+}
+
+#boutonRecurante{
     position: fixed;
     bottom: 20px;     /* distance par rapport au bas */
     right: 20px;      /* distance par rapport à la droite */
