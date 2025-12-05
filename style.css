@@ -4,8 +4,7 @@
 .Accueuil{
     text-align: center;
 }
-
-#boutongoat{
+#boutongoat {
     position: fixed;
     bottom: 20px;     /* distance par rapport au bas */
     right: 20px;      /* distance par rapport à la droite */
@@ -19,7 +18,6 @@
     box-shadow: 0 3px 10px rgba(0,0,0,0.25);
     transition: transform .1s ease;
 }
-
 #boutonRecurante{
     position: fixed;
     bottom: 20px;     /* distance par rapport au bas */
