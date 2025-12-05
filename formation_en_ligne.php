@@ -9,7 +9,10 @@ $req = $pdo->prepare("Select type_profile From compte");
 $req->execute();
 $type_profil = $req->fetchAll();
 
-$agences = "select id_agence from travail where id_utilisateur = id_contact";
+$req = $pdo->prepare("select id_agence from travail where id_utilisateur = id_contact");
+$req->execute();
+$agences = $req->fetchAll();
+
 $adherants = false;
 
 if ($type_profil != "contact") {
@@ -23,11 +26,3 @@ if ($type_profil != "contact") {
     }
 }
 ?>
-$req=$pdo->prepare("INSERT INTO produits (Forme, Hauteur_cm, Prix, FixationMurale) VALUES (:Forme, :Hauteur_cm, :Prix, :FixationMurale)");
-$req->bindParam(':Forme', $Forme);
-$req->bindParam(':Hauteur_cm', $Hauteur_cm);
-$req->bindParam(':Prix', $Prix);
-$req->bindParam(':FixationMurale', $FixationMurale);
-
-
-$req->execute();
