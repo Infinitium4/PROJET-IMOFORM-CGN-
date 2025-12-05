@@ -1,18 +1,30 @@
-#SeConnecter{
+body {
+    background-color: #e4eeff;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #404040;
+}
+
+
+#SeConnecter {
     margin-left: auto;
 }
-.Accueuil{
+
+.Accueuil {
     text-align: center;
 }
 
-#boutonRecurante , #boutonRetour, #boutongoat{
+
+#boutongoat,
+#boutonRecurante,
+#boutonRetour {
     position: fixed;
-    bottom: 20px;     /* distance par rapport au bas */
-    right: 20px;      /* distance par rapport à la droite */
+    bottom: 20px;
+    right: 20px;
     display: inline-block;
     padding: 12px 20px;
-    background: #535557;
-    color: white;
+    background: #575757;
+    color: rgb(255, 255, 255);
     text-decoration: none;
     border-radius: 8px;
     font-weight: 600;
@@ -24,12 +36,27 @@
     max-width: 450px;
     margin: 80px auto;
     padding: 25px;
-    background: #fff;
+    background: #eeeeee; 
     border-radius: 12px;
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 }
 
-.form-box>h3{
+.form-box > h3 {
     text-align: center;
 }
 
+
+.navbar.bg-body-tertiary {
+    background-color: #a3b2c9 !important;
+}
+
+
+.navbar.bg-body-tertiary .navbar-brand,
+.navbar.bg-body-tertiary .nav-link {
+    color: white;
+}
+
+
+.navbar.bg-body-tertiary .nav-link:hover {
+    color: #dbe9ff;
+}
