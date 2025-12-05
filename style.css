@@ -1,12 +1,12 @@
-/* Fond global bleu très clair */
+
 body {
-    background-color: #e4eeff; /* bleu très clair */
+    background-color: #e4eeff;
     margin: 0;
     font-family: Arial, sans-serif;
     color: #404040;
 }
 
-/* Styles existants */
+
 #SeConnecter {
     margin-left: auto;
 }
@@ -15,7 +15,7 @@ body {
     text-align: center;
 }
 
-/* Boutons fixes */
+
 #boutongoat,
 #boutonRecurante,
 #boutonRetour {
@@ -24,8 +24,8 @@ body {
     right: 20px;
     display: inline-block;
     padding: 12px 20px;
-    background: #eaeef1;
-    color: white;
+    background: #575757;
+    color: rgb(255, 255, 255);    
     text-decoration: none;
     border-radius: 8px;
     font-weight: 600;
@@ -33,12 +33,11 @@ body {
     transition: transform .1s ease;
 }
 
-/* Formulaire */
 .form-box {
     max-width: 450px;
     margin: 80px auto;
     padding: 25px;
-    background: #eeeeee; /* formulaire blanc pour bien ressortir */
+    background: #eeeeee; 
     border-radius: 12px;
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 }
@@ -47,18 +46,18 @@ body {
     text-align: center;
 }
 
-/* Surcharge la couleur de fond de la navbar */
+
 .navbar.bg-body-tertiary {
-    background-color: #a3b2c9 !important; /* bleu un peu plus foncé */
+    background-color: #a3b2c9 !important;
 }
 
-/* Texte blanc pour les liens */
+
 .navbar.bg-body-tertiary .navbar-brand,
 .navbar.bg-body-tertiary .nav-link {
     color: white;
 }
 
-/* Texte des liens au survol */
+
 .navbar.bg-body-tertiary .nav-link:hover {
-    color: #dbe9ff; /* bleu très clair au survol */
+    color: #dbe9ff;
 }
