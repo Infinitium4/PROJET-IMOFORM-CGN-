@@ -60,3 +60,10 @@ body {
 .navbar.bg-body-tertiary .nav-link:hover {
     color: #dbe9ff;
 }
+
+#BoutonCreation {
+    display: block;
+    margin : auto;
+    text-decoration: underline blue;
+    color: blue;
+}
