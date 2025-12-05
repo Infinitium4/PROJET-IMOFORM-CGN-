@@ -3,7 +3,7 @@ include "navbar.php";
 include "header.php";
 ?>
 
-<form action="formation_en_ligne.php" method="post" class="mt-3">
+<form action="actions/" method="post" class="mt-3">
     <input type="hidden" name="id" value="<?php echo $id ?>" />
     <div class="form-box">
         <form action="actions/" method="post" class="mt-3">
@@ -14,17 +14,20 @@ include "header.php";
 
             <div class="mb-3">
                 <label class="form-label" for="titre">Description</label>
-                <input id="Description" type="text" class="form-control">
+                <textarea id="Description" class="form-control"></textarea>
             </div>
 
             <div class="mb-3">
-                <label class="form-label" for="titre">Durée</label>
-                <input id="Duree" type="text" class="form-control">
+                <label class="form-label" for="duree">Durée</label>
+                <div class="d-flex gap-2">
+                    <input type="number" id="heures" name="heures" class="form-control" placeholder="Heures" min="0">
+                    <input type="number" id="minutes" name="minutes" class="form-control" placeholder="Minutes" min="0" max="59">
+                </div>
             </div>
 
             <div class="mb-3">
                 <label class="form-label" for="titre">Niveau</label>
-                <input id="Niveau" type="text" class="form-control">
+                <input id="Niveau" type="text" placeholder="Ex : Débutant, Intermédiaire, Professionel" class="form-control">
             </div>
 
             <div class="mb-3">
@@ -34,15 +37,16 @@ include "header.php";
 
             <div class="mb-3">
                 <label class="form-label" for="titre">Date et Heure</label>
-                <input id="date_heure" type="datetime-local" name="titre" class="form-control">
+                <input id="date_heure" type="datetime-local" class="form-control">
             </div>
 
             <div class="mb-3">
-                <label class="form-label" for="titre">Url Accès</label>
-                <input id="url_access" type="text" maxlength="65" class="form-control">
+                <label class="form-label" for="titre">Accès Url</label>
+                <input id="url_access" type="text" placeholder="Ex : https://www.google.com" maxlength="65" class="form-control">
             </div>
-
-            <button type="submit" class="btn btn-success w-100">OK</button>
+            <button type="submit" class="btn btn-success w-100">Envoyer</button>
         </form>
     </div>
 </form>
+<a id="boutonRetour" btn btn-danger" href="formation_en_ligne.php">Retour</a>
+
