@@ -1,30 +1,30 @@
-#SeConnecter{
+/* Fond global bleu très clair */
+body {
+    background-color: #e4eeff; /* bleu très clair */
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #404040;
+}
+
+/* Styles existants */
+#SeConnecter {
     margin-left: auto;
 }
-.Accueuil{
+
+.Accueuil {
     text-align: center;
 }
-#boutongoat {
+
+/* Boutons fixes */
+#boutongoat,
+#boutonRecurante,
+#boutonRetour {
     position: fixed;
-    bottom: 20px;     /* distance par rapport au bas */
-    right: 20px;      /* distance par rapport à la droite */
+    bottom: 20px;
+    right: 20px;
     display: inline-block;
     padding: 12px 20px;
-    background: #535557;
-    color: white;
-    text-decoration: none;
-    border-radius: 8px;
-    font-weight: 600;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.25);
-    transition: transform .1s ease;
-}
-#boutonRecurante{
-    position: fixed;
-    bottom: 20px;     /* distance par rapport au bas */
-    right: 20px;      /* distance par rapport à la droite */
-    display: inline-block;
-    padding: 12px 20px;
-    background: #535557;
+    background: #eaeef1;
     color: white;
     text-decoration: none;
     border-radius: 8px;
@@ -33,30 +33,32 @@
     transition: transform .1s ease;
 }
 
+/* Formulaire */
 .form-box {
     max-width: 450px;
     margin: 80px auto;
     padding: 25px;
-    background: #fff;
+    background: #eeeeee; /* formulaire blanc pour bien ressortir */
     border-radius: 12px;
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 }
 
-.form-box>h3{
+.form-box > h3 {
     text-align: center;
 }
 
-#boutonRetour{
-    position: fixed;
-    bottom: 20px;     /* distance par rapport au bas */
-    right: 20px;      /* distance par rapport à la droite */
-    display: inline-block;
-    padding: 12px 20px;
-    background: #535557;
+/* Surcharge la couleur de fond de la navbar */
+.navbar.bg-body-tertiary {
+    background-color: #a3b2c9 !important; /* bleu un peu plus foncé */
+}
+
+/* Texte blanc pour les liens */
+.navbar.bg-body-tertiary .navbar-brand,
+.navbar.bg-body-tertiary .nav-link {
     color: white;
-    text-decoration: none;
-    border-radius: 8px;
-    font-weight: 600;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.25);
-    transition: transform .1s ease;
+}
+
+/* Texte des liens au survol */
+.navbar.bg-body-tertiary .nav-link:hover {
+    color: #dbe9ff; /* bleu très clair au survol */
 }
