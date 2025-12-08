@@ -8,7 +8,7 @@
 
 
         <!-- Bouton mobile -->
-        <a class="navbar-brand d-lg-none" href="connexion.php" id="SeConnecter">Se Connecter</a>
+        <a class="navbar-brand d-lg-none" href="page_connexion.php" id="SeConnecter">Se Connecter</a>
 
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
             <span class="navbar-toggler-icon"></span>
