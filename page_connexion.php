@@ -4,13 +4,13 @@ include "navbar.php";
 ?>
 <div class="form-box">
     <h3>Connexion</h3>
-    <form action="actions/" method="post" class="mt-3">
+    <form action="actions/connexion.php" method="post" class="mt-3">
         <div class="mb-3">
-            <label class="form-label" for="titre">adresse mail</label>
+            <label class="form-label" name="adresse_mail">adresse mail</label>
             <input id="titre" type="text" required maxlength="65" name="titre" class="form-control">
         </div>
         <div class="mb-3">
-            <label class="form-label" for="titre">mod de passe</label>
+            <label class="form-label" name="mdp">mod de passe</label>
             <input id="titre" type="text" required maxlength="65" name="titre" class="form-control">
         </div>
         <input type="hidden" name="token" value="<?php echo $token; ?>">

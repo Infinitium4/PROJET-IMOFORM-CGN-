@@ -1,3 +1,8 @@
+<?php 
+    session_start();
+    $token=rand(0,100000);
+    $_SESSION["token"]=$token;
+?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
