@@ -74,14 +74,9 @@ body {
     color: #dbe9ff;
 }
 
-
-#logo {
-    width: 200px;
-    height: auto;
-}
-
-#logo-small {
-    height: 50px;
-    width: auto;
-    margin-right: 12px; /* espace avec le texte */
+#BoutonCreation {
+    display: block;
+    margin : auto;
+    text-decoration: underline blue;
+    color: blue;
 }
