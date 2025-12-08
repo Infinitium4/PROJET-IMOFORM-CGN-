@@ -6,7 +6,6 @@
         Accueil
     </a>
 
-
         <!-- Bouton mobile -->
         <a class="navbar-brand d-lg-none" href="connexion.php" id="SeConnecter">Se Connecter</a>
 
@@ -30,8 +29,14 @@
                 }
                 ?>
             </ul>
-            <!-- SE CONNECTER A DROITE SUR GRAND ÉCRAN -->
-            <a class="navbar-brand ms-lg-auto d-none d-lg-block btn btn-primary" href="page_connexion.php">Se Connecter</a>
+            <?php
+            if(isset($_SESSION["compte"]["adresse_mail"])){
+                echo '<a class="navbar-brand ms-lg-auto d-none d-lg-block btn btn-dark" href="page_deconnexion.php">Se déconnecter</a>';
+            }else{
+                echo '<a class="navbar-brand ms-lg-auto d-none d-lg-block btn btn-info" href="page_connexion.php">Connexion</a>';
+            }
+            ?>
+                   
         </div>
     </div>
 </nav>
