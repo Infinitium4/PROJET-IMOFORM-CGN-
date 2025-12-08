@@ -9,6 +9,10 @@ if (!empty($_SESSION['adresse_utilisateur'])) {
     $req->execute([$user_id]);
     $type_profil = $req->fetchColumn();
 
+    $req = $pdo->prepare("select id_agence from travail where id_utilisateur = id_contact");
+    $req->execute();
+    $agences = $req->fetchAll();
+  
     $req = $pdo->prepare("SELECT id_agence FROM travail WHERE id_contact = ?");
     $req->execute([$user_id]);
     $agences = $req->fetchAll(PDO::FETCH_COLUMN);
