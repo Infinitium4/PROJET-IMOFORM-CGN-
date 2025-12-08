@@ -8,13 +8,12 @@ body {
     color: #404040;
     background-color: #e4eeff;
 
-    /* rayures ondulées diagonales */
     background-image: 
         radial-gradient(circle at 10% 30%, rgba(128,128,128,0.1) 5%, transparent 6%),
         radial-gradient(circle at 50% 70%, rgba(128,128,128,0.1) 5%, transparent 6%);
     background-size: 80px 80px;
 }
-    
+
 
 
 #SeConnecter {
@@ -79,4 +78,15 @@ body {
     margin : auto;
     text-decoration: underline blue;
     color: blue;
+}
+
+#logo {
+    width: 200px;
+    height: auto;
+}
+
+#logo-small {
+    height: 50px;
+    width: auto;
+    margin-right: 12px;
 }
