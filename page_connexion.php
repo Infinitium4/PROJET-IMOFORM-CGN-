@@ -8,11 +8,11 @@ include "navbar.php";
     <form action="actions/connexion.php" method="post" class="mt-3">
         <div class="mb-3">
             <label class="form-label" for="titre">adresse mail</label>
-            <input id="titre" type="text" required maxlength="65" name="titre" class="form-control">
+            <input id="titre" type="text" required maxlength="65" name="adresse_mail" class="form-control">
         </div>
         <div class="mb-3">
             <label class="form-label" for="titre">mod de passe</label>
-            <input id="titre" type="text" required maxlength="65" name="titre" class="form-control">
+            <input id="titre" type="text" required maxlength="65" name="mdp" class="form-control">
         </div>
         <input type="hidden" name="token" value="<?php echo $token; ?>">
 

@@ -1,6 +1,8 @@
 <?php
 include "header.php";
 include "navbar.php";
+session_start();
+
 
 if (!empty($_SESSION['adresse_utilisateur'])) {
     $user_id = $_SESSION['adresse_utilisateur'];
@@ -33,4 +35,3 @@ if (!empty($_SESSION['adresse_utilisateur'])) {
     }
 }
 ?>
-<a href="demande_F_ligne.php" class="btn" id="boutonRecurante">Faire une demande</a>

@@ -18,19 +18,19 @@ $req->bindParam(':mail', $mail);
 $req->execute();
 $compte = $req->fetch(PDO::FETCH_ASSOC);
 
-if($compte===false){
+if(!$compte){
     echo "<script>alert('adresse mail inccorect');</script>";
-    header("Location: ../page_connexion.php");
-    exit();
+    //header("Location: ../page_connexion.php");
 }
+//password_verify($mdp, $compte['mdp']
 else{
-    if(password_verify($mdp, $compte['mdp'])){
+    if($compte['mdp']==$mdp){
+        $_SESSION["compte"]=$compte;
         header("Location: ../index.php");
-        exit();
     }
     else{
-        header("Location: ../page_connexion.php");
-        exit();
+        echo "<script>alert('mdp inccorect');</script>";
+        //header("Location: ../page_connexion.php");
     }
 }
 ?>
