@@ -7,11 +7,11 @@ include "navbar.php";
         <form action="actions/insert_compte.php" method="post" class="mt-3">
             <div class="mb-3">
                 <label class="form-label" for="titre">adresse mail</label>
-                <input id="titre" type="text" required maxlength="65" name="titre" class="form-control">
+                <input id="mail" type="email" name="adresse_mail" class="form-control">
             </div>
             <div class="mb-3">
-                <label class="form-label" for="titre" >mod de passe</label>
-                <input id="titre" type="text" required maxlength="65" name="titre" class="form-control">
+                <label class="form-label" for="titre">mod de passe</label>
+                <input id="mdp" type="password" name="mdp" class="form-control" required>
             </div>
 
             <label class="mb-3">
