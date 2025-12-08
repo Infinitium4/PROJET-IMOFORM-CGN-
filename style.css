@@ -80,3 +80,16 @@ body {
     text-decoration: underline blue;
     color: blue;
 }
+
+
+
+#logo {
+    width: 200px;
+    height: auto;
+}
+
+#logo-small {
+    height: 50px;
+    width: auto;
+    margin-right: 12px; /* espace avec le texte */
+}
