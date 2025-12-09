@@ -50,7 +50,12 @@ body {
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 }
 
-.form-box > h3 {
+.form-box > div {
+    text-align: center;
+    font-weight: bold;
+}    
+
+.form-box>h3 {
     text-align: center;
     font-weight: bold;
 }

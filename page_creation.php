@@ -6,11 +6,11 @@ include "navbar.php";
         <h3>Créer</h3>
         <form action="actions/insert_compte.php" method="post" class="mt-3">
             <div class="mb-3">
-                <label class="form-label" for="titre">adresse mail</label>
-                <input id="mail" type="email" name="adresse_mail" class="form-control">
+                <label class="form-label" for="titre">adresse mail :</label>
+                <input id="mail" type="email" name="adresse_mail" class="form-control" required>
             </div>
             <div class="mb-3">
-                <label class="form-label" for="titre">mod de passe</label>
+                <label class="form-label" for="titre">mod de passe :</label>
                 <input id="mdp" type="password" name="mdp" class="form-control" required>
             </div>
 
@@ -27,10 +27,12 @@ include "navbar.php";
             </label>
 
             <input type="hidden" name="token" value="<?php echo $token; ?>">
-            <br>
-                <input class="btn btn-success w-50" type="submit" value="ok">
-                <a href="page_connexion.php" class="btn btn-secondary w-50" role="button" >retour</a>
-            
+
+            <div class="gbut">
+                <input class="btn btn-success" type="submit" value="ok">
+                <a href="page_connexion.php" class="btn btn-secondary" role="button" >retour</a>
+            </div>
+
         </form>
     </div>
 <?php
