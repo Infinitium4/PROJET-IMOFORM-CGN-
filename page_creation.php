@@ -27,7 +27,10 @@ include "navbar.php";
             </label>
 
             <input type="hidden" name="token" value="<?php echo $token; ?>">
-            <button type="submit" class="btn btn-success w-100">OK</button>
+            <br>
+                <input class="btn btn-success w-50" type="submit" value="ok">
+                <a href="page_connexion.php" class="btn btn-secondary w-50" role="button" >retour</a>
+            
         </form>
     </div>
 <?php

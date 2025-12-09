@@ -12,7 +12,7 @@ include "navbar.php";
         </div>
         <div class="mb-3">
             <label class="form-label" for="titre">mod de passe</label>
-            <input id="titre" type="text" required maxlength="65" name="mdp" class="form-control">
+            <input id="titre" type="password" required maxlength="65" name="mdp" class="form-control">
         </div>
         <input type="hidden" name="token" value="<?php echo $token; ?>">
 

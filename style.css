@@ -14,8 +14,6 @@ body {
     background-size: 80px 80px;
 }
 
-
-
 #SeConnecter {
     margin-left: auto;
 }
@@ -57,17 +55,14 @@ body {
     font-weight: bold;
 }
 
-
 .navbar.bg-body-tertiary {
     background-color: #a3b2c9 !important;
 }
-
 
 .navbar.bg-body-tertiary .navbar-brand,
 .navbar.bg-body-tertiary .nav-link {
     color: white;
 }
-
 
 .navbar.bg-body-tertiary .nav-link:hover {
     color: #dbe9ff;
