@@ -15,6 +15,7 @@ $_SESSION['token']=$token;
     <title>Immoform</title>
 </head>
 <body>
+
 <?php
 include_once "config.php";
 $pdo = new PDO("mysql:host=". config::HOST . ";dbname=". config::DBNAME, config::USER, config::PASSWORD);

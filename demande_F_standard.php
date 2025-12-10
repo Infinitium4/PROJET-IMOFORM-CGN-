@@ -1,11 +1,9 @@
 <?php
 include "header.php";
 include "navbar.php";
-$token=rand(0,1000000);
-$_SESSION["token"]=$token;
 ?>
 
-<form action="actions/" method="post" class="mt-3">
+<form action="actions/insert_F_standard.php" method="post" class="mt-3">
     <input type="hidden" name="id" value="<?php echo $id ?>" />
     <div class="form-box">
         <form action="actions/" method="post" class="mt-3">
@@ -25,6 +23,7 @@ $_SESSION["token"]=$token;
                 <label class="form-label" for="titre">Secteur Concerné</label>
                 <input id="secteur_concernee" type="text" class="form-control">
             </div>
+            <input type="hidden" name="token" value="<?php echo $token; ?>">
             <button type="submit" class="btn btn-success w-100">Envoyer</button>
         </form>
     </div>

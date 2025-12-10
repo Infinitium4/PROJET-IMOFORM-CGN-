@@ -9,7 +9,3 @@ include "navbar.php";
         <a class="btn btn-secondary" href="index.php" role="button">non</a>
     </div>
 </div>
-
-<?php
-include "footer.php";
-?>

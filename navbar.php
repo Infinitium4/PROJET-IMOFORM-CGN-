@@ -39,7 +39,7 @@
             if(isset($_SESSION["compte"]["adresse_mail"])){
                 echo '<a class="navbar-brand ms-lg-auto d-none d-lg-block btn btn-dark" href="page_deconnexion.php">Se déconnecter</a>';
             }else{
-                echo '<a class="navbar-brand ms-lg-auto d-none d-lg-block btn btn-info" href="page_connexion.php">Connexion</a>';
+                echo '<a class="navbar-brand ms-lg-auto d-none d-lg-block btn btn-primary" href="page_connexion.php">Connexion</a>';
             }
             ?>
                    

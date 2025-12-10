@@ -1,12 +1,10 @@
 <?php
 include "header.php";
 include "navbar.php";
-$token=rand(0,1000000);
-$_SESSION["token"]=$token;
 ?>
 <div class="form-box">
     <h3>Formation</h3>
-    <form action="actions/" method="post" class="mt-3">
+    <form action="actions/insert_personnalisee.php" method="post" class="mt-3">
         
         <div class="mb-3">
             <label class="form-label" for="titre">Titre</label>
