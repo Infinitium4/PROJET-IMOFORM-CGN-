@@ -1,37 +1,18 @@
 <?php
 include "header.php";
 include "navbar.php";
-session_start();
 
-
-if (!empty($_SESSION['adresse_utilisateur'])) {
-    $user_id = $_SESSION['adresse_utilisateur'];
-
-    $req = $pdo->prepare("SELECT type_profile FROM compte WHERE id = ?");
-    $req->execute([$user_id]);
-    $type_profil = $req->fetchColumn();
-
-    $req = $pdo->prepare("select id_agence from travail where id_utilisateur = id_contact");
+if (isset($_SESSION['compte']["type_profile"]) && $_SESSION['compte']["type_profile"] == "contacts") {
+    $req = $pdo->prepare("SELECT a.adherent, a.id, a.nom FROM agences a JOIN travail t ON t.id_agence=a.id WHERE t.id_contact=:id_client AND adherent=TRUE");
+    $req->bindParam(':id_client', $_SESSION["compte"]["id_utilisateur"]);
     $req->execute();
-    $agences = $req->fetchAll();
-  
-    $req = $pdo->prepare("SELECT id_agence FROM travail WHERE id_contact = ?");
-    $req->execute([$user_id]);
-    $agences = $req->fetchAll(PDO::FETCH_COLUMN);
-
-    if ($type_profil !== "contact") {
-        echo "Vous ne remplissez pas les critères pour accéder à cette page.";
-    } else {
-        foreach ($agences as $id_agence) {
-            $req = $pdo->prepare("SELECT adherant FROM agence WHERE id = ?");
-            $req->execute([$id_agence]);
-            $adherant = $req->fetchColumn();
-
-            if ($adherant) {
-                echo '<a href="demande_F_ligne.php" class="btn" id="boutonRecurante">Faire une demande</a>';
-                break;
-            }
+    $agences = $req->fetch(PDO::FETCH_ASSOC);
+    if($agences){
+        echo '<a href="demande_F_ligne.php" class="btn" id="boutonRecurante">Commander</a>';
+        foreach($agences as $agence){     
+            $_SESSION["compte"]["agences"][]=$agence;           
         }
     }
 }
 ?>
+<h1>Voici nos formations en ligne</h1>
