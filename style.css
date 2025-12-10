@@ -90,3 +90,9 @@ body {
     width: auto;
     margin-right: 12px;
 }
+
+.errormessages{
+    color: red;
+    font-style: italic;
+    font-weight: bold;
+}

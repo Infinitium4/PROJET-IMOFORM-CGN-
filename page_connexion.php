@@ -15,7 +15,11 @@ include "navbar.php";
             <input id="titre" type="password" required maxlength="65" name="mdp" class="form-control">
         </div>
         <input type="hidden" name="token" value="<?php echo $token; ?>">
-
+        <?php
+            if(isset($_SESSION["ConnexionErrorMessage"])){
+                echo '<div class="errormessages"><a>'.$_SESSION["ConnexionErrorMessage"].'</a></div>';
+            }
+        ?>
         <button type="submit" class="btn btn-success w-100">OK</button>
     </form>
 </div>

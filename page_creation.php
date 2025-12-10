@@ -3,10 +3,15 @@ include "header.php";
 include "navbar.php";
 ?>
     <div class="form-box">
-        <h3>Créer</h3>
+        <h3>Créer un compte</h3>
         <form action="actions/insert_compte.php" method="post" class="mt-3">
             <div class="mb-3">
                 <label class="form-label" for="titre">adresse mail :</label>
+                <?php
+                    if(isset($_SESSION["AdresseErrorMessage"])){
+                        echo '<div class="errormessages"><a>'.$_SESSION["AdresseErrorMessage"].'</a></div>';
+                    }
+                ?>
                 <input id="mail" type="email" name="adresse_mail" class="form-control" required>
             </div>
             <div class="mb-3">
@@ -17,7 +22,7 @@ include "navbar.php";
             <label class="mb-3">
                 <label class="form-label" for="titre">Type de Profil</label>
                 <br>
-                <input type="radio"  name="choix" value="formateurs">
+                <input type="radio"  name="choix" value="formateurs" required>
                 formateur
             </label>
 
