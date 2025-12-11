@@ -10,7 +10,7 @@ if (isset($_SESSION['compte']["type_profile"]) && $_SESSION['compte']["type_prof
     if($agences){
         echo '<a href="demande_F_ligne.php" id="boutonRecurante">Commander</a>';
         foreach($agences as $agence){     
-            $_SESSION["compte"]["agences"][]=$agence;           
+            $_SESSION["compte"]["agencesAD"][]=$agence;           
         }
     }
 }
@@ -23,18 +23,19 @@ if (isset($_SESSION['compte']["type_profile"]) && $_SESSION['compte']["type_prof
     </div>
 
     <div class="bulle">
-        <h2>Exemples de modules :</h2>
-        <ul>
-            <li><strong>Introduction à la vente immobilière</strong> – Durée : 3h – Niveau : Débutant – Secteur : Résidentiel</li>
-            <li><strong>Stratégie marketing avancée</strong> – Durée : 4h – Niveau : Avancé – Secteur : Commercial</li>
-            <li><strong>Gestion des transactions et des clients</strong> – Durée : 2h – Niveau : Intermédiaire – Secteur : Mixte</li>
-        </ul>
+        <p>Chaque formation est animée par un formateur spécialisé et comprend des supports en ligne accessibles à tout moment.</p>
+        <img src="media/formationEnLigne.png" alt="Formation en ligne">
     </div>
 
     <div class="bulle">
-        <p>Chaque formation est animée par un formateur spécialisé et comprend des supports en ligne accessibles à tout moment.</p>
-        <img src="images/formation-en-ligne.jpg" alt="Formation en ligne">
+        <h2>Nos prochains modules en ligne :</h2>
+        <ul>
+
+            <li><strong>titre</strong> - Description : x - Durée : x - Niveau : x - Secteur : x - Date et Heure : x x - Formateur : x </li>
+
+        </ul>
     </div>
+
 </div>
 
 <?php

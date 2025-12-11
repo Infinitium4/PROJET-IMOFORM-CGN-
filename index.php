@@ -26,7 +26,8 @@ include "navbar.php";
 <div class="bulle">
     <h2>Pourquoi choisir Immoform ?</h2>
     <p>Avec plusieurs années d’expérience et une équipe de formateurs certifiés, nous proposons des solutions adaptées à tous les types d’agences.</p>
-    <img src="images/formation-accueil.jpg" alt="Formation Immoform">
+    <img src="media/immoformBatiment.png" alt="Centre Immoform">
+    <img src="media/immoformAcceuil.png" alt="Acceuil Immoform">
 </div>
 
 
