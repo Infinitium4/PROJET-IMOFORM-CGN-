@@ -30,7 +30,8 @@
                         echo '<li class="nav-item"><a class="nav-link" href="profil_client.php">Mes formations</a></li>';
                     }
                     elseif ($_SESSION["compte"]["type_profile"] === "formateurs") {
-                        echo '<li class="nav-item"><a class="nav-link" href="profil_formateur.php">Gestionnaire réservations</a></li>';
+                        echo '<li class="nav-item"><a class="nav-link" href="page_creation_formation.php">Créer une formation</a></li>';
+                        echo '<li class="nav-item"><a class="nav-link" href="page_gestion_formations.php">Gestion des formations</a></li>';
                     }
                 }
                 ?>

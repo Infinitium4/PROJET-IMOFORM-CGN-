@@ -1,5 +1,11 @@
 <?php
 session_start();
+$tokenServeur = $_SESSION['token'];
+$tokenRecu=filter_input(INPUT_POST, 'token',FILTER_DEFAULT);
+
+if($tokenServeur!=$tokenRecu){
+    die("TOKEN ERROR");
+}
 
 $adresse_mail = filter_input(INPUT_POST, 'adresse_mail', FILTER_VALIDATE_EMAIL);
 $password = filter_input(INPUT_POST, 'mdp', FILTER_DEFAULT);

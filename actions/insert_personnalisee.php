@@ -17,7 +17,7 @@ include "../config.php";
 $pdo = new PDO('mysql:host=' . config::HOST . ';dbname=' . config::DBNAME, config::USER, config::PASSWORD);
 
 //requete sql a adapter
-$req = $pdo->prepare("INSERT INTO compte (id_utilisateur, adresse_mail, mdp, type_profile) VALUES (:id, :adresse_mail, :mdp, :type_profile)");
+$req = $pdo->prepare("INSERT INTO formations_personnalises (id_utilisateur, adresse_mail, mdp, type_profile) VALUES (:id, :adresse_mail, :mdp, :type_profile)");
 $req->bindParam(':titre', $titre);
 $req->bindParam(':description', $description);
 $req->bindParam(':commentaire', $commentaire);

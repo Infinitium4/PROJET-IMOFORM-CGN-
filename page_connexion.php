@@ -4,7 +4,7 @@ include "navbar.php";
 ?>
 <div class="form-box">
     <h3>Connexion</h3>
-    <a href="page_creation.php" class="btn" id="BoutonCreation">Créer un compte</a>
+    <a href="page_creation_compte.php" class="btn" id="BoutonCreation">Créer un compte</a>
     <form action="actions/connexion.php" method="post" class="mt-3">
         <div class="mb-3">
             <label class="form-label" for="titre">adresse mail :</label>
