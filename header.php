@@ -1,9 +1,3 @@
-<?php
-session_start();
-$token=random_int(0,10000000);
-$_SESSION['token']=$token;
-?>
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>

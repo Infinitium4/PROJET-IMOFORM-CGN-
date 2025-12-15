@@ -4,35 +4,20 @@ $tokenServeur = $_SESSION['token'];
 $tokenRecu = filter_input(INPUT_POST, 'token',FILTER_DEFAULT);
 
 if ($tokenServeur != $tokenRecu){
-    die("TOKEN ERROR");
+    die("TOKEN ERROR. Va mourir vilain hacker");
 }
-
-include "../config.php";
-$pdo = new PDO("mysql:host=" . config::HOST . ";dbname=" . config::DBNAME, config::USER, config::PASSWORD);
 
 $mail = filter_input(INPUT_POST, 'adresse_mail', FILTER_DEFAULT);
 $mdp = filter_input(INPUT_POST, 'mdp', FILTER_DEFAULT);
+$hashed_mdp = password_hash($mdp, PASSWORD_DEFAULT);
 
-$req = $pdo->prepare("SELECT * FROM compte WHERE adresse_mail=:mail");
-$req->bindParam(':mail', $mail);
+//on prépare la requête avec des bindParam pour éviter les injections SQL
+$req = $pdo->prepare("");
+$req->bindParam(':nom', $nom);
 $req->execute();
-$compte = $req->fetch(PDO::FETCH_ASSOC);
 
-if(!$compte){
-    $_SESSION["ConnexionErrorMessage"]="Adresse mail ou mot de passe incorrect";
-    header("Location: ../page_connexion.php");
-    exit;
-}
-else{
-    if(password_verify($mdp, $compte['mdp'])){
-        $_SESSION["compte"]=$compte;
-        header("Location: ../index.php");
-        exit;
-    }
-    else{
-        $_SESSION["ConnexionErrorMessage"]="Adresse mail ou mot de passe incorrect";
-        header("Location: ../page_connexion.php");
-        exit;
-    }
-}
+//retour à la page d'accueil
+header("Location: ../categorie.php?d=".$id_categorie);
 ?>
+
+$_SESSION["adresse_utilisateur"]
