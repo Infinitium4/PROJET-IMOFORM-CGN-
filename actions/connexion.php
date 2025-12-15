@@ -19,18 +19,20 @@ $req->execute();
 $compte = $req->fetch(PDO::FETCH_ASSOC);
 
 if(!$compte){
-    echo "<script>alert('adresse mail inccorect');</script>";
-    //header("Location: ../page_connexion.php");
+    $_SESSION["ConnexionErrorMessage"]="Adresse mail ou mot de passe incorrect";
+    header("Location: ../page_connexion.php");
+    exit;
 }
-//password_verify($mdp, $compte['mdp']
 else{
-    if($compte['mdp']==$mdp){
+    if(password_verify($mdp, $compte['mdp'])){
         $_SESSION["compte"]=$compte;
         header("Location: ../index.php");
+        exit;
     }
     else{
-        echo "<script>alert('mdp inccorect');</script>";
-        //header("Location: ../page_connexion.php");
+        $_SESSION["ConnexionErrorMessage"]="Adresse mail ou mot de passe incorrect";
+        header("Location: ../page_connexion.php");
+        exit;
     }
 }
 ?>

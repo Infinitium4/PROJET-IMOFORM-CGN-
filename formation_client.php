@@ -2,15 +2,20 @@
 include "header.php";
 include "navbar.php";
 
-$req = $pdo->prepare("SELECT * FROM inscriptions  WHERE id_contact = :idUser");
+$req = $pdo->prepare("SELECT type_formation , id_fomation FROM inscriptions  WHERE id_contact = :idUser");
 $req->execute([":idUser" => $_SESSION['compte']['id']]);
 $formations = $req->fetchAll();
+
+$req = $pdo->prepare("SELECT type_formation , id_fomation FROM inscriptions  WHERE id_contact = :idUser");
+$req->execute([":idUser" => $_SESSION['compte']['id']]);
+$formations = $req->fetchAll();
+
 ?>
 
 <table class="table table-stripped">
     <tr>
-        <th>Titre</th>
-        <th>Description</th>
+        <th>Agence</th>
+        <th>type formation</th>
         <th>Actions</th>
     </tr>
     <?php

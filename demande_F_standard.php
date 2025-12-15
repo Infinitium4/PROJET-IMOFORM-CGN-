@@ -1,6 +1,6 @@
 <?php
-include "navbar.php";
 include "header.php";
+include "navbar.php";
 $token=rand(0,1000000);
 $_SESSION["token"]=$token;
 ?>

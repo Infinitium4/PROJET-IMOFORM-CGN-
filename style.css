@@ -14,8 +14,6 @@ body {
     background-size: 80px 80px;
 }
 
-
-
 #SeConnecter {
     margin-left: auto;
 }
@@ -52,22 +50,24 @@ body {
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 }
 
-.form-box > h3 {
+.form-box > div {
+    text-align: center;
+    font-weight: bold;
+}    
+
+.form-box>h3 {
     text-align: center;
     font-weight: bold;
 }
-
 
 .navbar.bg-body-tertiary {
     background-color: #a3b2c9 !important;
 }
 
-
 .navbar.bg-body-tertiary .navbar-brand,
 .navbar.bg-body-tertiary .nav-link {
     color: white;
 }
-
 
 .navbar.bg-body-tertiary .nav-link:hover {
     color: #dbe9ff;
@@ -89,6 +89,12 @@ body {
     height: 50px;
     width: auto;
     margin-right: 12px;
+}
+
+.errormessages{
+    color: red;
+    font-style: italic;
+    font-weight: bold;
 }
 
 

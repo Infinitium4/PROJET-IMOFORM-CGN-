@@ -5,8 +5,6 @@
         <img src="media/logo01.png" id="logo-small" style="margin-right: 8px;">
         Accueil
     </a>
-
-        <!-- Bouton mobile -->
         <a class="navbar-brand d-lg-none" href="connexion.php" id="SeConnecter">Se Connecter</a>
 
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -19,12 +17,20 @@
                 $fichiers = scandir(__DIR__);
                 foreach ($fichiers as $fichier) {
                     if ($fichier != "." && $fichier != "..") {
-                        // Vérifie que le fichier commence par "formation_"
                         if (strpos($fichier, "formation_") === 0) {
                             $nom_sans_ext = pathinfo($fichier, PATHINFO_FILENAME);
-                            $nom_final = substr($nom_sans_ext, strlen("formation_"));
+                            $nom_sf = substr($nom_sans_ext, strlen("formation_"));
+                            $nom_final = str_replace("_", " ", $nom_sf);
                             echo '<li class="nav-item"><a class="nav-link" href="'.$fichier.'">'.$nom_final.'</a></li>';
                         }
+                    }
+                }
+                if (isset($_SESSION["compte"]["type_profile"])) {
+                    if ($_SESSION["compte"]["type_profile"] === "contacts") {
+                        echo '<li class="nav-item"><a class="nav-link" href="profil_client.php">Mes formations</a></li>';
+                    }
+                    elseif ($_SESSION["compte"]["type_profile"] === "formateurs") {
+                        echo '<li class="nav-item"><a class="nav-link" href="profil_formateur.php">Gestionnaire réservations</a></li>';
                     }
                 }
                 ?>
