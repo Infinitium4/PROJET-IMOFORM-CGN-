@@ -28,5 +28,5 @@ include "navbar.php";
         </form>
     </div>
 </form>
-<a id="boutonRetour" btn btn-danger" href="formation_en_ligne.php">Retour</a>
+<a id="bouton" btn btn-danger" href="formation_en_ligne.php">Retour</a>
 

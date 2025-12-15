@@ -2,6 +2,7 @@
 session_start();
 $token=random_int(0,10000000);
 $_SESSION['token']=$token;
+$_SESSION['date_heure']=date("Y-m-d H:i:s");
 ?>
 
 <!DOCTYPE html>
@@ -37,9 +38,6 @@ if (isset($_SESSION['compte']["type_profile"]) && $_SESSION['compte']["type_prof
             $listeNoms[] = $agence["nom"];
         }
     }
-
-    var_dump($_SESSION["compte"]) ;
-
 }
 
 ?>
