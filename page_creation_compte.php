@@ -15,7 +15,7 @@ include "navbar.php";
                 <input id="mail" type="email" name="adresse_mail" class="form-control" required>
             </div>
             <div class="mb-3">
-                <label class="form-label" for="titre">mod de passe :</label>
+                <label class="form-label" for="titre">mot de passe :</label>
                 <input id="mdp" type="password" name="mdp" class="form-control" required>
             </div>
 
