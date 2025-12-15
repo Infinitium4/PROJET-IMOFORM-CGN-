@@ -3,8 +3,8 @@ include "header.php";
 include "navbar.php";
 ?>
 
-<form action="actions/insert_F_standard.php" method="post" class="mt-3">
-    <input type="hidden" name="id" value="<?php echo $id ?>" />
+<form action="actions/insert_F_ligne.php" method="post" class="mt-3">
+    <input type="hidden" name="id" value="<?= $id ?>" />
     <div class="form-box">
         <form action="actions/" method="post" class="mt-3">
             <div class="mb-3">
@@ -23,10 +23,13 @@ include "navbar.php";
                 <label class="form-label" for="titre">Secteur Concerné</label>
                 <input id="secteur_concernee" type="text" class="form-control">
             </div>
-            <input type="hidden" name="token" value="<?php echo $token; ?>">
-            <button type="submit" class="btn btn-success w-100">Envoyer</button>
-        </form>
+            <input type="hidden" name="token" value="<?= $token ?>">
+            <div class="d-flex justify-content-center gap-3">
+                <button type="submit" class="btn btn-success w-50">Envoyer</button>
+                <a class="btn btn-secondary w-50" href="page_gestion_formations.php" role="button">Retour</a>
+            </div>
+            </form>
     </div>
 </form>
-<a id="bouton" btn btn-danger" href="formation_en_ligne.php">Retour</a>
+
 

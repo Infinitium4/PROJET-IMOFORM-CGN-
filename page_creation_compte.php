@@ -31,7 +31,7 @@ include "navbar.php";
                 contact
             </label>
 
-            <input type="hidden" name="token" value="<?php echo $token; ?>">
+            <input type="hidden" name="token" value="<?= $token ?>">
 
             <div class="gbut">
                 <input class="btn btn-success" type="submit" value="ok">

@@ -32,7 +32,7 @@ if (isset($_SESSION['compte']["type_profile"]) && $_SESSION['compte']["type_prof
 </div>
 
 <div class="bulle">
-    <img src="images/conseils-personnalises.jpg" alt="Conseils personnalisés">
+    <img src="media/conseilsPersonnalises.png" alt="Conseils personnalisés">
 </div>
 </div>
 

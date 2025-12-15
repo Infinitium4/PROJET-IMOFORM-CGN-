@@ -1,0 +1,32 @@
+<?php
+include "navbar.php";
+include "header.php";
+?>
+
+<form action="actions/insert_F_ligne.php" method="post" class="mt-3">
+    <input type="hidden" name="id" value="<?= $id ?>" />
+    <div class="form-box">
+        <form action="actions/" method="post" class="mt-3">
+            <div class="mb-3">
+                <label class="form-label" for="titre">Titre</label>
+                <input id="titre" type="text" maxlength="65" class="form-control">
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="titre">Description</label>
+                <textarea id="Description" class="form-control"></textarea>
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="titre">Niveau</label>
+                <input id="Niveau" type="text" placeholder="Ex : Débutant, Intermédiaire, Professionel" class="form-control">
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="titre">Secteur Concerné</label>
+                <input id="secteur_concernee" type="text" class="form-control">
+            </div>
+            <input type="hidden" name="token" value="<?= $token ?>">
+            <button type="submit" class="btn btn-success w-100">Envoyer</button>
+        </form>
+    </div>
+</form>
+<a id="bouton" btn btn-danger" href="formation_en_ligne.php">Retour</a>
+

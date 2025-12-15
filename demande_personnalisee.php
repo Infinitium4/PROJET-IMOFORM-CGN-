@@ -8,7 +8,7 @@ include "navbar.php";
     <form action="actions/insert_demande_personnalisee.php" method="post" class="mt-3">
         <div class="mb-3">
             <label for="couleur">Agence :</label>
-            <select name="id_agence" id="couleur">
+            <select name="id_agence" id="id_agence">
             <?php
             foreach($_SESSION["compte"]["agences"] as $agence){
                     echo '<option value="'.$agence["id"].'">'.$agence["nom"].'</option>';
@@ -17,11 +17,11 @@ include "navbar.php";
             </select>
         </div>
 
-        <input type="hidden" name="id_contact" value="<?php echo $_SESSION["compte"]["id_utilisateur"]; ?>">
+        <input type="hidden" name="id_contact" value="<?= $_SESSION["compte"]["id_utilisateur"]; ?>">
 
         <div class="mb-3">
             <label class="form-label" for="titre">Type de conseil :</label>
-            <input id="titre" type="text" required maxlength="65" name="titre" class="form-control">
+            <input id="type_conseil" type="text" required maxlength="65" name="type_conseil" class="form-control">
         </div>
 
         <div class="mb-3">
@@ -29,7 +29,7 @@ include "navbar.php";
             <textarea id="description" name="description" class="form-control" rows="4"></textarea>
         </div>
 
-        <input type="hidden" name="token" value="<?php echo $token; ?>">
+        <input type="hidden" name="token" value="<?= $token ?>">
 
         <button type="submit" class="btn btn-success w-100">envoyer</button>
     </form>
