@@ -1,4 +1,4 @@
-<?phpgit
+<?php
 include "header.php";
 include "navbar.php";
 ?>
@@ -9,4 +9,4 @@ include "navbar.php";
 </div>
 <?php
 include "footer.php";
-?> 
+?>
