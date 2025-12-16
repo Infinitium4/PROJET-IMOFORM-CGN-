@@ -1,0 +1,22 @@
+version: "3.9"
+
+services:
+  web:
+    build: .
+    container_name: immoform-web
+    restart: always
+    ports:
+      - "80:80"
+    volumes:
+      - ../PROJET-IMOFORM-CGN-:/var/www/html
+    networks:
+      - immoform-net
+    environment:
+      DB_HOST: db
+      DB_NAME: immoform_db
+      DB_USER: immoform_user
+      DB_PASSWORD: immoform_pass
+
+networks:
+  immoform-net:
+    external: true

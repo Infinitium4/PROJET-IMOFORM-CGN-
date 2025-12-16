@@ -24,6 +24,6 @@ include "navbar.php";
     </form>
 </div>
 
-<?php
+<?php   
 include "footer.php";
 ?>
