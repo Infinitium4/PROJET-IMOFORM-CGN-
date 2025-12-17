@@ -8,11 +8,11 @@ include "navbar.php";
     <form action="actions/connexion.php" method="post" class="mt-3">
         <div class="mb-3">
             <label class="form-label" for="titre">adresse mail :</label>
-            <input id="titre" type="text" required maxlength="65" name="adresse_mail" class="form-control">
+            <input type="text" required maxlength="65" name="adresse_mail" class="form-control">
         </div>
         <div class="mb-3">
             <label class="form-label" for="titre">mod de passe :</label>
-            <input id="titre" type="password" required maxlength="65" name="mdp" class="form-control">
+            <input type="password" required maxlength="65" name="mdp" class="form-control">
         </div>
         <input type="hidden" name="token" value="<?= $token ?>">
         <?php
@@ -25,5 +25,6 @@ include "navbar.php";
 </div>
 
 <?php
+$_SESSION["ConnexionErrorMessage"]="";
 include "footer.php";
 ?>

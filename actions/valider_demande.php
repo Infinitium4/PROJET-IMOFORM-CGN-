@@ -16,7 +16,7 @@ $pdo = new PDO("mysql:host=" . config::HOST . ";dbname=" . config::DBNAME, confi
 $id_formation = filter_input(INPUT_POST, 'id_formation', FILTER_DEFAULT);
 $id_formateur = filter_input(INPUT_POST, 'id_formateur', FILTER_DEFAULT);
 
-$req = $pdo->prepare("UPDATE demande_conseils SET `statut`='termine',`id_formateur`=:id_formateur WHERE id=:id_formation");
+$req = $pdo->prepare("UPDATE demande_conseils SET `statut`='accepte',`id_formateur`=:id_formateur WHERE id=:id_formation");
 $req->bindParam(':id_formation', $id_formation);
 $req->bindParam(':id_formateur', $id_formateur);
 $req->execute();

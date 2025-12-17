@@ -12,11 +12,11 @@ include "navbar.php";
                         echo '<div class="errormessages"><a>'.$_SESSION["AdresseErrorMessage"].'</a></div>';
                     }
                 ?>
-                <input id="mail" type="email" name="adresse_mail" class="form-control" required>
+                <input type="email" name="adresse_mail" class="form-control" required>
             </div>
             <div class="mb-3">
                 <label class="form-label" for="titre">mot de passe :</label>
-                <input id="mdp" type="password" name="mdp" class="form-control" required>
+                <input type="password" name="mdp" class="form-control" required>
             </div>
 
             <label class="mb-3">

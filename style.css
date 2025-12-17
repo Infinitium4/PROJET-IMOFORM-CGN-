@@ -94,6 +94,10 @@ body {
     color: blue;
 }
 
+.rond {
+  border-radius: 100%;
+}
+
 #logo {
     width: 200px;
     height: auto;

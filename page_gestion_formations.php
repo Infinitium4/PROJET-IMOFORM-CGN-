@@ -94,7 +94,7 @@ else{?>
     </div><?php
 }
 
-$req=$pdo->prepare("SELECT * FROM demande_conseils WHERE statut='termine' && id_formateur=:id_formateur");
+$req=$pdo->prepare("SELECT * FROM demande_conseils WHERE statut='accepte' && id_formateur=:id_formateur");
 $req->bindParam(':id_formateur', $id_session);
 $req->execute();
 $formations_a_creer = $req->fetchAll();
@@ -162,8 +162,7 @@ else{?>
                     <div class="button d-flex justify-content-between">
                         <form action="creation_F_conseil.php" method="post">
                             <input type="hidden" name="token" value="<?= $token ?>">
-                            <input type="hidden" name="id_formation" value="<?= $formation_a_creer['id'] ?>">
-                            <input type="hidden" name="id" value="<?= $id_session; ?>">
+                            <input type="hidden" name="id_demande" value="<?= $formation_a_creer['id'] ?>">
                             <button type="submit" class="btn btn-success">Creer la formation</button>
                         </form>
                     </div>
